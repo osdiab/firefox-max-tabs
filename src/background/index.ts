@@ -1,12 +1,12 @@
 /**
  * Entrypoint for the background script
  */
-import Message from 'common/Message';
-import {ContentMessageKind} from 'common/messageKinds';
 
-async function maintainMaxTabsInWindow() {
+async function maintainMaxTabsInWindow(
+  tab: browser.tabs.Tab
+) {
   const tabs = await browser.tabs.query({
-    currentWindow: true
+    windowId: tab.windowId
   });
   const removableTabs = tabs.filter(t =>
     !t.pinned && t.id && t.id !== browser.tabs.TAB_ID_NONE);
@@ -25,17 +25,9 @@ async function maintainMaxTabsInWindow() {
 }
 
 async function handleMessage(
-  message: Message,
-  sender: browser.runtime.MessageSender,
-  sendResponse: (resp: Message) => void
+  tab: browser.tabs.Tab
 ) {
-  switch (message.kind) {
-    case ContentMessageKind.TAB_OPENED:
-      return maintainMaxTabsInWindow();
-    default:
-      console.error(message);
-      throw new Error(`Invalid message type: ${message.kind}`);
-  }
+  return maintainMaxTabsInWindow(tab);
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+browser.tabs.onCreated.addListener(handleMessage);
