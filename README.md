@@ -24,10 +24,23 @@ that's when Web Extensions were introduced).
 
 Run `npm start`. It should open in Firefox automatically.
 
+This does not run lint and test.
+
 ### Building the extension
 
-Run `npm build`. The extension will be outputted to
-TODO: fill in where it gets outputted
+Run `npm run-script build-ext`. The extension will be
+outputted to `web-ext-artifacts/`.
+
+This runs lint and test first, so those must pass before
+the artifact will be built.
+
+### Testing and linting
+
+Write tests using Jest. To run them, run `npm test`.
+
+Ensure your code passes `tslint`. To check, run
+`npm run-script lint`. Even better, however, is to set up
+your text editor or IDE to automatically run tslint.
 
 ### Structure of the extension
 
@@ -37,3 +50,11 @@ script.
 
 The source code is in `src/`, which Webpack outputs to the
 `__build/` directory.
+
+## Credits
+
+### Icon
+
+The icon uses the Overpass font, created by Red Hat under
+the SIL open source license. It can be found here:
+https://www.fontsquirrel.com/fonts/overpass
