@@ -34,10 +34,24 @@
     "typescript": "^2.4.2"
   },
   "devDependencies": {
+    "@types/jest": "^20.0.7",
     "jest": "^20.0.4",
     "tslint": "^5.6.0",
     "tslint-eslint-rules": "^4.1.1",
     "web-ext": "^2.0.0",
     "webpack": "^3.5.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/scripts/tsc-jest-preprocessor.js"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).ts"
+    ]
   }
 }
