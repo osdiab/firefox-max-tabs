@@ -22,7 +22,15 @@
       false
     ],
     // disable no-default-export because default exports are not bad
-    "no-default-export": false
+    "no-default-export": false,
+    // disable typedef since it's redundant
+    "typedef": [
+      false
+    ],
+    // doesn't really provide much valuable info
+    "interface-name": [
+      false
+    ]
   },
   "rulesDirectory": []
 }
