@@ -2,7 +2,9 @@
 
 Extension for setting the max tabs per window.
 
-CircleCI: [![CircleCI](https://circleci.com/gh/osdiab/webextension-max-tabs.svg?style=svg)](https://circleci.com/gh/osdiab/webextension-max-tabs)
+### Flags/Continuous Integration
+
+* CircleCI: [![CircleCI](https://circleci.com/gh/osdiab/webextension-max-tabs.svg?style=svg)](https://circleci.com/gh/osdiab/webextension-max-tabs)
 
 ## Development
 
