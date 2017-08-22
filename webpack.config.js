@@ -12,11 +12,10 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.json'],
-    },
-
-    alias: {
-      content: path.join(__dirname, "src", "content"),
+        extensions: ['.js', '.ts', '.json'],
+        alias: {
+            content: path.join(__dirname, "src", "content"),
+        },
     },
 
     module: {

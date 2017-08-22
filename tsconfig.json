@@ -14,13 +14,15 @@
       "./types",
       "./node_modules/@types"
     ],
+    "baseUrl": ".",
     "paths": {
       "content/*": [
         "./src/content/*"
       ]
     },
     "lib": [
-      "es2017"
+      "es2017",
+      "dom"
     ]
   },
   "include": [
