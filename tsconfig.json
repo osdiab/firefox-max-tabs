@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "__build",
+    "module": "commonjs",
+    "target": "es2015",
+    "rootDir": ".",
+    "noImplicitReturns": true,
+    "strict": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+
+}
