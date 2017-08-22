@@ -13,6 +13,14 @@
     "typeRoots": [
       "./types",
       "./node_modules/@types"
+    ],
+    "paths": {
+      "content/*": [
+        "./src/content/*"
+      ]
+    },
+    "lib": [
+      "es2017"
     ]
   },
   "include": [

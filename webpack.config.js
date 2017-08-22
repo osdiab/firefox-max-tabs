@@ -14,6 +14,10 @@ module.exports = {
         extensions: ['.ts', '.json'],
     },
 
+    alias: {
+      content: path.join(__dirname, "src", "content"),
+    },
+
     module: {
         loaders: [
             {
