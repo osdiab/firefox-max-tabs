@@ -4,7 +4,13 @@
   "description": "Set the maximum number of tabs that can be open",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "build-source": "webpack",
+    "test": "jest",
+    "lint": "tslint -p . && web-ext lint",
+    "prebuild": "npm test && npm run-script lint && npm run-script build-source",
+    "prestart": "npm run-script build-source",
+    "start": "web-ext run",
+    "build": "npm run-script prebuild && web-ext build"
   },
   "repository": {
     "type": "git",
