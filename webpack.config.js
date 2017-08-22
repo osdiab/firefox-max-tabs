@@ -2,6 +2,7 @@ const path = require("path");
 
 module.exports = {
     entry: [
+        "core-js",
         "./src/content/index.ts",
     ],
 
