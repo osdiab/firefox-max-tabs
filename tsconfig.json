@@ -12,10 +12,20 @@
     "experimentalDecorators": true,
     "typeRoots": [
       "./types",
-      "./node_modules/@types"
+      "node_modules/@types",
+      "node_modules/web-ext-types"
     ],
     "baseUrl": ".",
+
+    // If you update paths, don't forget to also
+    // update the aliases member of webpack.config.js.
     "paths": {
+      "background/*": [
+        "./src/background/*"
+      ],
+      "common/*": [
+        "./src/common/*"
+      ],
       "content/*": [
         "./src/content/*"
       ]
