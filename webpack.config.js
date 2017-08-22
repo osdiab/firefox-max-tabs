@@ -1,19 +1,13 @@
 const path = require("path");
 
-module.exports = {
-    entry: [
-        "core-js",
-        "./src/content/index.ts",
-    ],
-
-    output: {
-        filename: "content.js",
-        path: path.resolve(__dirname, "__build"),
-    },
-
+const sharedConfig = {
     resolve: {
         extensions: ['.js', '.ts', '.json'],
+        // If you update aliases, don't forget to also
+        // update the path member of tsconfig.json.
         alias: {
+            background: path.join(__dirname, "src", "background"),
+            common: path.join(__dirname, "src", "common"),
             content: path.join(__dirname, "src", "content"),
         },
     },
@@ -27,5 +21,30 @@ module.exports = {
             },
         ],
     },
-
 }
+
+module.exports = [
+    Object.assign({}, sharedConfig, {
+        entry: [
+            "core-js",
+            "./src/content/index.ts",
+        ],
+
+        output: {
+            filename: "content.js",
+            path: path.resolve(__dirname, "__build"),
+        },
+    }),
+
+    Object.assign({}, sharedConfig, {
+        entry: [
+            "core-js",
+            "./src/background/index.ts",
+        ],
+
+        output: {
+            filename: "background.js",
+            path: path.resolve(__dirname, "__build"),
+        },
+    }),
+];
