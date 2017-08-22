@@ -1,0 +1,37 @@
+{
+  "name": "webextension-max-tabs",
+  "version": "0.0.1",
+  "description": "Set the maximum number of tabs that can be open",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osdiab/webextension-max-tabs.git"
+  },
+  "keywords": [
+    "webextensions",
+    "firefox",
+    "extension",
+    "browser",
+    "tabs"
+  ],
+  "author": "Omar Diab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osdiab/webextension-max-tabs/issues"
+  },
+  "homepage": "https://github.com/osdiab/webextension-max-tabs#readme",
+  "dependencies": {
+    "ts-loader": "^2.3.3",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4",
+    "tslint": "^5.6.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "web-ext": "^2.0.0"
+  }
+}
