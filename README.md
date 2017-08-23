@@ -1,10 +1,10 @@
 # firefox-max-tabs
 
-Extension for setting the max tabs per window.
+Extension for limiting the number of tabs open in your browser.
 
-### Flags/Continuous Integration
-
-* CircleCI: [![CircleCI](https://circleci.com/gh/osdiab/webextension-max-tabs.svg?style=svg)](https://circleci.com/gh/osdiab/webextension-max-tabs)
+| Gitter | CircleCI |
+|--------|----------|
+|[![Join the chat at https://gitter.im/webextension-tab-limit/Lobby](https://badges.gitter.im/webextension-tab-limit/Lobby.svg)](https://gitter.im/webextension-tab-limit/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) | [![CircleCI](https://circleci.com/gh/osdiab/webextension-max-tabs.svg?style=svg)](https://circleci.com/gh/osdiab/webextension-max-tabs) |
 
 ## Development
 
