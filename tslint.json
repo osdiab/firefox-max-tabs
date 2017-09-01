@@ -8,6 +8,10 @@
   // Policy: if you add a rule to ignore, give a reason why it is good to
   // disable
   "rules": {
+    // react-tsx-curly-spacing appears to be buggy
+    "react-tsx-curly-spacing": [
+      false
+    ],
     // disable import-name because renaming imported modules can be useful,
     // like when a db method and a set of endpoints share the same name
     // but reside in different folders, and therefore are differently
@@ -22,7 +26,15 @@
       false
     ],
     // disable no-default-export because default exports are not bad
-    "no-default-export": false
+    "no-default-export": false,
+    // disable typedef since it's redundant
+    "typedef": [
+      false
+    ],
+    // doesn't really provide much valuable info
+    "interface-name": [
+      false
+    ]
   },
   "rulesDirectory": []
 }

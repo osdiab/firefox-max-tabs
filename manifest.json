@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Max Tabs",
+  "name": "Tab Limit",
   "version": "0.0.1",
 
-  "description": "Lets you set a maximum number of tabs to allow open",
+  "description": "Set a limit for the number of opened tabs",
 
   "icons": {
     "48": "icons/48.svg"
@@ -14,6 +14,16 @@
       "matches": ["<all_urls>"],
       "js": ["__build/content.js"]
     }
+  ],
+  "background": {
+    "scripts": ["__build/background.js"]
+  },
+  "options_ui": {
+    "page": "src/options_ui/index.html"
+  },
+
+  "permissions": [
+    "tabs"
   ]
 
 }

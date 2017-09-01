@@ -9,7 +9,7 @@
     "lint": "tslint -p . && web-ext lint",
     "preflight": "npm test && npm run-script lint && npm run-script build-src",
     "prestart": "npm run-script build-src",
-    "start": "web-ext run",
+    "start": "concurrently 'onchange \"src/**/*\" -- npm run-script build-src' 'web-ext run'",
     "build-ext": "npm run-script preflight && web-ext build --overwrite-dest"
   },
   "repository": {
@@ -30,16 +30,26 @@
   },
   "homepage": "https://github.com/osdiab/webextension-max-tabs#readme",
   "dependencies": {
+    "@types/react": "^16.0.5",
+    "@types/react-dom": "^15.5.4",
+    "@types/react-redux": "^5.0.6",
     "core-js": "^2.5.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
     "ts-loader": "^2.3.3",
-    "typescript": "^2.4.2"
+    "typescript": "^2.4.2",
+    "typescript-fsa": "^2.5.0"
   },
   "devDependencies": {
     "@types/jest": "^20.0.7",
+    "concurrently": "^3.5.0",
     "jest": "^20.0.4",
     "tslint": "^5.6.0",
     "tslint-microsoft-contrib": "^5.0.1",
     "web-ext": "^2.0.0",
+    "web-ext-types": "^0.3.1",
     "webpack": "^3.5.5"
   },
   "jest": {
