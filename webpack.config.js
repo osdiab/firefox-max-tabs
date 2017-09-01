@@ -9,6 +9,7 @@ const sharedConfig = {
             background: path.join(__dirname, "src", "background"),
             common: path.join(__dirname, "src", "common"),
             content: path.join(__dirname, "src", "content"),
+            options_ui: path.join(__dirname, "src", "options_ui"),
         },
     },
 
@@ -44,6 +45,18 @@ module.exports = [
 
         output: {
             filename: "background.js",
+            path: path.resolve(__dirname, "__build"),
+        },
+    }),
+
+    Object.assign({}, sharedConfig, {
+        entry: [
+            "core-js",
+            "./src/options_ui/index.tsx",
+        ],
+
+        output: {
+            filename: "options_ui.js",
             path: path.resolve(__dirname, "__build"),
         },
     }),

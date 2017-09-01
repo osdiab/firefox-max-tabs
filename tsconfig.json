@@ -29,6 +29,9 @@
       ],
       "content/*": [
         "./src/content/*"
+      ],
+      "options_ui/*": [
+        "./src/options_ui/*"
       ]
     },
     "lib": [
