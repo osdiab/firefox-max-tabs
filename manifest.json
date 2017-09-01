@@ -18,6 +18,9 @@
   "background": {
     "scripts": ["__build/background.js"]
   },
+  "options_ui": {
+    "page": "src/options_ui/index.html"
+  },
 
   "permissions": [
     "tabs"
