@@ -2,7 +2,7 @@ const path = require("path");
 
 const sharedConfig = {
     resolve: {
-        extensions: ['.js', '.ts', '.json'],
+        extensions: ['.js', '.ts', '.tsx', '.json'],
         // If you update aliases, don't forget to also
         // update the path member of tsconfig.json.
         alias: {
@@ -15,7 +15,7 @@ const sharedConfig = {
     module: {
         loaders: [
             {
-                test: /\.ts$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: ['ts-loader'],
             },
